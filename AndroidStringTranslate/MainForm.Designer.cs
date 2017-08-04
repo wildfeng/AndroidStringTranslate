@@ -30,7 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnTranslate = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,14 +58,15 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnTranslate
             // 
-            this.button2.Location = new System.Drawing.Point(3, 34);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnTranslate.Location = new System.Drawing.Point(3, 196);
+            this.btnTranslate.Name = "btnTranslate";
+            this.btnTranslate.Size = new System.Drawing.Size(75, 23);
+            this.btnTranslate.TabIndex = 1;
+            this.btnTranslate.Text = "翻译";
+            this.btnTranslate.UseVisualStyleBackColor = true;
+            this.btnTranslate.Click += new System.EventHandler(this.btnTranslate_Click);
             // 
             // btnBrowse
             // 
@@ -81,7 +82,7 @@
             // 
             this.panel1.Controls.Add(this.btnBrowse);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnTranslate);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(464, 0);
             this.panel1.Name = "panel1";
@@ -107,7 +108,7 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnTranslate;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Panel panel1;
     }

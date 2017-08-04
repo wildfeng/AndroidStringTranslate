@@ -53,6 +53,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Translate\AbsTranslater.cs" />
+    <Compile Include="Translate\EnglishTranslater.cs" />
+    <Compile Include="Translate\TranslateCompletedEventArgs.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

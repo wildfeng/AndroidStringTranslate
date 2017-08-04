@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AndroidStringTranslate.Translate;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,6 +55,33 @@ namespace AndroidStringTranslate
                 dataTable.Rows.Add(row);
             }
                 dataGridView1.DataSource = dataTable;
+        }
+
+        private void beginTranslate()
+        {
+
+        }
+
+        private void btnTranslate_Click(object sender, EventArgs e)
+        {
+            IEnumerable<DataRow> rows = from p in dataTable.AsEnumerable()                                        select p;
+
+            foreach(DataRow row in rows)
+            {
+                row["繁体"] = "aaaa";
+            }
+
+            string varrrr = rows.ElementAt(0)["简体"].ToString();
+
+            EnglishTranslater ter = new EnglishTranslater();
+            ter.SourceString = varrrr;
+            ter.TranslateCompleted += Ter_TranslateCompleted;
+            ter.BetinTranslateAsync();
+        }
+
+        private void Ter_TranslateCompleted(object sender, TranslateCompletedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
